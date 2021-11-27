@@ -33,7 +33,7 @@ node {
       echo "Docker Image Tag Name: ${dockerImageTag}"
 	  
         sh "docker images"
-      //  sh "docker login -u vickeyyvickey -p Hello@123"
+        sh "docker login -u vickeyyvickey -p Hello@123"
 	
 }
     stage('Docker push'){
@@ -41,7 +41,7 @@ node {
 	// sh "docker images | awk '{print $3}' | awk 'NR==2'"
 	//sh echo "Enter the docker lattest imageID"
 	//sh "read imageid"
-	//   sh "docker tag 1f49185f0d6b  vickeyyvickey/myapplication" //must change the name and tag no
- //       sh "docker push   vickeyyvickey/myapplication"
+	   sh "docker tag 562470a611c3     vickeyyvickey/myapplication" //must change the name and tag no
+       sh "docker push   vickeyyvickey/myapplication"
   }
 }
